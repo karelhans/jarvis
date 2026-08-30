@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-home"
+version = "0.1.0"
+description = "A private, local-first voice assistant: 'Hey Jarvis, what's on the schedule for today?'"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Karel van der Kaaij" }]
+dependencies = [
+    "google-api-python-client>=2.100",
+    "google-auth-oauthlib>=1.0",
+    "requests>=2.28",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# The ears: wake word + microphone + speech-to-text.
+voice = [
+    "openwakeword>=0.6",
+    "onnxruntime>=1.16",
+    "faster-whisper>=1.0",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12",
+    "numpy>=1.24",
+]
+# The mouth: Piper neural TTS. Skip on macOS if you're happy with `say`.
+piper = ["piper-tts>=1.2"]
+
+[project.scripts]
+jarvis = "jarvis.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jarvis*"]

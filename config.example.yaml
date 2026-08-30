@@ -1,0 +1,37 @@
+# Jarvis configuration.
+# Copy this file to ./config.yaml or ~/.config/jarvis/config.yaml and edit.
+# Every key is optional — remove anything you're happy to leave at the default.
+
+owner: Karel                 # how Jarvis addresses you
+timezone: Europe/Amsterdam   # IANA name; remove to use the machine's timezone
+time_format: "24h"           # "24h" or "12h" — how times are spoken
+
+location:                    # used for the weather part of the briefing
+  city: Amsterdam
+  latitude: 52.37
+  longitude: 4.90
+  units: celsius             # celsius | fahrenheit
+
+sources:                     # what goes into the briefing
+  calendar: true             # Google Calendar — today's events
+  tasks: true                # Google Tasks — open todos
+  gmail: false               # unread mail; needs the gmail.readonly scope.
+                             # After changing this, run: jarvis auth --reset
+  weather: true              # Open-Meteo, no API key needed
+
+google:
+  credentials: ~/.config/jarvis/credentials.json  # OAuth client (README step 0)
+  token: ~/.config/jarvis/token.json              # written by `jarvis auth`
+  calendars: [primary]       # calendar ids to read; add shared calendars here
+
+speech:
+  wake_models: [hey_jarvis]  # openWakeWord model name, or path to a custom .onnx
+  wake_threshold: 0.5        # 0..1 — lower triggers easier, higher = stricter
+  ack: "Yes?"                # spoken when you say only the wake word; "" = silent
+  stt_model: base.en         # faster-whisper model: tiny.en | base.en | small.en
+  language: en
+  tts_engine: auto           # auto | piper | say | espeak | print
+  piper_voice: ~/.local/share/jarvis/voices/en_US-amy-medium.onnx
+  mic_device: null           # sounddevice index or name; null = system default
+  silence_rms: 300           # `jarvis hear` prints your level if this needs tuning
+  max_command_seconds: 10

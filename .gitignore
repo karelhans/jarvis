@@ -1,0 +1,24 @@
+# Secrets — never commit these
+credentials.json
+token.json
+*.secret
+.env
+
+# Local config (copy of config.example.yaml)
+config.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Voice models and audio scratch
+voices/
+*.onnx
+*.onnx.json
+*.tflite
+*.wav

@@ -1,0 +1,23 @@
+# Run Jarvis at boot as a user service (Raspberry Pi / any Linux).
+#
+#   mkdir -p ~/.config/systemd/user
+#   cp deploy/jarvis.service ~/.config/systemd/user/
+#   systemctl --user daemon-reload
+#   systemctl --user enable --now jarvis
+#   loginctl enable-linger $USER     # keep it running when not logged in
+#
+# Logs: journalctl --user -u jarvis -f
+# Assumes the repo lives at ~/jarvis with a virtualenv in ~/jarvis/.venv
+
+[Unit]
+Description=Jarvis voice assistant (wake word listener)
+After=network-online.target sound.target
+
+[Service]
+WorkingDirectory=%h/jarvis
+ExecStart=%h/jarvis/.venv/bin/jarvis listen
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
