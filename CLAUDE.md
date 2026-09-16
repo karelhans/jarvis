@@ -34,3 +34,5 @@ numbers) — look those up in Gmail/Calendar at runtime instead.
   appointments go on the calendar.
 - When asked about trips or plans, check Gmail and Google Calendar before
   answering — bookings usually live there.
+- **Baby signing with Max**: use **ASL** (Karel's explicit choice over NGT),
+  **3 signs per day**, delivered as a daily lesson in the Jarvis app.
