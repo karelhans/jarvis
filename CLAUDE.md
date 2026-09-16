@@ -21,6 +21,8 @@ numbers) — look those up in Gmail/Calendar at runtime instead.
 - **London trip Mon 21 – Thu 24 Sep 2026.**
 - **Urban Arrow Family cargo bike** — pickup at Freewheely Amsterdam,
   Thu 17 Sep 2026.
+- **Paris, Fri 16 – Mon 19 Oct 2026** — Tara's belated birthday weekend
+  (who Tara is to Karel is not yet recorded — ask when relevant).
 
 ## Preferences
 
