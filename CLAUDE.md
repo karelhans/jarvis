@@ -25,5 +25,10 @@ numbers) — look those up in Gmail/Calendar at runtime instead.
 ## Preferences
 
 - Replies can be in English; calendar entries in Dutch are fine.
+- The Jarvis app ingests Google Calendar and treats **every event as a real
+  event** (trip/appointment), generating debrief prompts afterwards. Never
+  create calendar events as reminders or to-dos — put action items in the
+  Jarvis app's Todos, in a handover note, or just tell Karel. Only real
+  appointments go on the calendar.
 - When asked about trips or plans, check Gmail and Google Calendar before
   answering — bookings usually live there.
