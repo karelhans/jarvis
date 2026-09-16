@@ -12,6 +12,8 @@ numbers) — look those up in Gmail/Calendar at runtime instead.
 - **Naomi** — Karel's partner. Trip and booking confirmations are usually
   forwarded to her (her address is in Gmail sent mail).
 - **Max** — Karel and Naomi's son, born October 2025.
+- **Olivia** — Karel and Naomi's daughter (age not yet recorded — ask when
+  relevant).
 
 ## Ongoing / upcoming (as of Sep 2026)
 
@@ -34,5 +36,10 @@ numbers) — look those up in Gmail/Calendar at runtime instead.
   appointments go on the calendar.
 - When asked about trips or plans, check Gmail and Google Calendar before
   answering — bookings usually live there.
-- **Baby signing with Max**: use **ASL** (Karel's explicit choice over NGT),
-  **3 signs per day**, delivered as a daily lesson in the Jarvis app.
+- **Baby signing (Olivia & Max)**: **personal household use only — not a
+  product** (Karel settled this explicitly, 16 Sep 2026; drop any
+  competitor/pricing framing). **ASL**, **3 signs per day**, delivered as a
+  daily lesson in the Jarvis app for Karel and Naomi to practice together.
+- Jarvis development follows the playbook in `jarvis-server/.claude/skills`:
+  **groom** (interview → spec) → **new-surface** (spec-first build) →
+  **ship** (deploy). Feature ideas are groomed before building.
